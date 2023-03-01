@@ -64,14 +64,14 @@ class RecipeView extends View {
           this._data.servings - 1
         }'>
           <svg>
-            <use href="${icons}.svg#icon-minus-circle"></use>
+            <use href="${icons}#icon-minus-circle"></use>
           </svg>
         </button>
         <button class="btn--tiny btn--update-servings" data-update-to='${
           this._data.servings + 1
         }'>
           <svg>
-            <use href="${icons}.svg#icon-plus-circle"></use>
+            <use href="${icons}#icon-plus-circle"></use>
           </svg>
         </button>
       </div>
@@ -81,7 +81,7 @@ class RecipeView extends View {
     </div>
     <button class="btn--round btn--bookmark">
       <svg class="">
-        <use href="${icons}.svg#icon-bookmark${
+        <use href="${icons}#icon-bookmark${
       this._data.bookmarked ? '-fill' : ''
     }"></use>
       </svg>
@@ -94,7 +94,7 @@ class RecipeView extends View {
     ${this._data.ingredients.map(this._generateMarkupIngredient).join('')}
       <li class="recipe__ingredient">
         <svg class="recipe__icon">
-          <use href="${icons}.svg#icon-check"></use>
+          <use href="${icons}#icon-check"></use>
         </svg>
         <div class="recipe__quantity">1000</div>
         <div class="recipe__description">
@@ -105,7 +105,7 @@ class RecipeView extends View {
 
       <li class="recipe__ingredient">
         <svg class="recipe__icon">
-          <use href="${icons}.svg#icon-check"></use>
+          <use href="${icons}#icon-check"></use>
         </svg>
         <div class="recipe__quantity">0.5</div>
         <div class="recipe__description">
@@ -132,7 +132,7 @@ class RecipeView extends View {
     >
       <span>Directions</span>
       <svg class="search__icon">
-        <use href="${icons}.svg#icon-arrow-right"></use>
+        <use href="${icons}#icon-arrow-right"></use>
       </svg>
     </a>
   </div>
@@ -142,7 +142,7 @@ class RecipeView extends View {
     return `
       <li class="recipe__ingredient">
       <svg class="recipe__icon">
-        <use href="${icons}.svg#icon-check"></use>
+        <use href="${icons}#icon-check"></use>
       </svg>
       <div class="recipe__quantity">${
         ing.quantity ? new Fraction(ing.quantity).toString() : ''
